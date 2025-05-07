@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Product list with cart</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <main>
+    <div class="main-content">
+      <h1>Desserts</h1>
+      <div class="products-list">
+      </div>
+    </div>
+    <div class="cart">
+      <h2>Your Cart (<span class="items-number">0</span>)</h2>
+      <div class="empty-placeholder">
+        <img src="./assets/images/illustration-empty-cart.svg" alt="">
+        <p>Your added items will appear here</p>
+      </div>
+      <div class="added-items hidden">
+      </div>
+      <div class="cart-summary hidden">
+      <div class="order-total ">
+        <h3>Order Total</h3>
+        <div>
+          <span>$</span>
+          <span class="order-total-price">0.00</span>
+        </div>
+      </div>
+      <div class="carbon-neutral-info">
+        <img src="assets/images/icon-carbon-neutral.svg" alt="carbon-tree">
+        <p>This is a <b>carbon-neutral</b> delivery</p>
+      </div>
+      <button class="checkout-button">Confirm Order</button>
+     </div>
+   </div>
+ </main>
+
+ <div class="overlay hidden">
+  <div class="confirmation-modal">
+    <div class="modal-content">
+    <div class="title-info">
+      <img src="assets/images/icon-order-confirmed.svg" alt="check-button">
+      <h3>Order Confirmed</h3>
+      <p>We hope you enjoy your food!</p>
+    </div>
+    <div class="confirmed-items">
+      <div class="order-total">
+        <h3>Order Total</h3>
+        <div>
+          <span>$</span>
+          <span class="order-summary-price">0.00</span>
+        </div>
+      </div>
+    </div>
+    <button class="new-order">Start new order</button>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
