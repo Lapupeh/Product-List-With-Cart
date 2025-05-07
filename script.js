@@ -170,11 +170,9 @@ addedItems.addEventListener('click', (e) => {
 
 // Implementing the confirm order button 
 function confirmOrder() {
-  
   overlay.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
-  confirmationModal.scrollIntoView({behavior: "smooth"});
-
+  
   let totalPrice = 0;
   Object.values(cart).forEach((item) => {
     const itemTotal = item.price * item.quantity;
@@ -204,6 +202,7 @@ confirmOrderBtn.addEventListener('click', confirmOrder);
 // Implementing new order button 
 function newOrder() {
   document.body.style.overflow = '';
+  document.body.scrollIntoView({behavior: "smooth"});
   const items = confirmedItems.querySelectorAll('.confirmed-item');
   items.forEach(item => item.remove());
   const allQuantityCounts = document.querySelectorAll('.products-list .quantity-count');
